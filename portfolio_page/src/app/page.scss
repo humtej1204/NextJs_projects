@@ -1,0 +1,13 @@
+main {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    overflow: hidden;
+
+    .main_container {
+        flex: 1 1 auto;
+        height: 100vh;
+        overflow: auto;
+        scroll-behavior: smooth;
+    }
+}

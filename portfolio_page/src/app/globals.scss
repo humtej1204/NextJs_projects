@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$color-light: #ffffff;
+$color-dark: #00080a;
+$color-primary: #00234b;
+$color-secondary: #005fb1;
+$color-neutro: #058df3;
+
+$font-maincolor: #333333;
+$font-subcolor: #666666;
+
+$border-main: #dfdfdf;
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container_sect {
+    padding: 5% 50px;
+}
+
+.section_container {
+    margin: auto;
+    max-width: 1400px;
+    width: 100%;
+}

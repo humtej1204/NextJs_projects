@@ -1,0 +1,43 @@
+@import '@/app/globals.scss';
+
+header {
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 0 5px 0 rgba(#666, 0.2);
+    color: $font-maincolor;
+    z-index: 100;
+
+    .toggle_item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        font-weight: 600;
+
+        i {
+            width: auto;
+            height: 20px;
+        }
+
+        img {
+            width: auto;
+            height: 20px;
+        }
+    }
+
+    hr {
+        width: 2.5px;
+        height: 25px;
+        background-color: $font-maincolor;
+        border: none;
+        border-radius: 2.5px;
+    }
+}
