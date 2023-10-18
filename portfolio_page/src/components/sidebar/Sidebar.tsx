@@ -4,7 +4,8 @@ export default function Sidebar() {
     return (
         <aside className='flex flex-col justify-between items-center'>
             <div className='logo_sect justify-center'>
-                <i className="fi fi-sr-user"></i>
+                <img src={`/assets/LOGO.svg`} />
+                <span>Haru Dev</span>
             </div>
 
             <ul>

@@ -5,6 +5,7 @@ export const TEC_LANGS = [
     { key: 'nextjs', label: 'NextJs' },
     { key: 'vue', label: 'Vue' },
     { key: 'css', label: 'CSS' },
+    { key: 'sass', label: 'SASS' },
     { key: 'bootstrap', label: 'Bootstrap' },
     { key: 'tailwind', label: 'Tailwind' },
     { key: 'javascript', label: 'JavaScript' },

@@ -1,7 +1,7 @@
 @import '@/app/globals.scss';
 
 header {
-    background-color: white;
+    background-color: var(--bg-color);
     border-radius: 0 0 10px 10px;
     position: absolute;
     top: 0;
@@ -12,7 +12,7 @@ header {
     align-items: center;
     gap: 15px;
     box-shadow: 0 0 5px 0 rgba(#666, 0.2);
-    color: $font-maincolor;
+    color: var(--font-main);
     z-index: 100;
 
     .toggle_item {
@@ -36,7 +36,7 @@ header {
     hr {
         width: 2.5px;
         height: 25px;
-        background-color: $font-maincolor;
+        background-color: var(--font-main);
         border: none;
         border-radius: 2.5px;
     }

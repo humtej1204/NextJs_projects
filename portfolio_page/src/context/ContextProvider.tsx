@@ -1,9 +1,12 @@
-import { PopupProvider } from './contexts/PopupContext';
+import { LangProvider } from './langContext/LangContext';
+import { ThemeProvider } from './thermeContext/ThermeContext';
 
 export function AppContextProvider({children}: any) {
     return (
-        <PopupProvider>
-            {children}
-        </PopupProvider>
+        <LangProvider>
+            <ThemeProvider>
+                {children}
+            </ThemeProvider>
+        </LangProvider>
     );
 }

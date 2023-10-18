@@ -7,7 +7,7 @@
     width: 100%;
     height: auto;
     max-height: 75vh;
-    background-color: white;
+    background-color: var(--bg-color);
     border-radius: 25px;
     padding: 50px;
     padding-top: 120px;
@@ -43,6 +43,7 @@
             display: flex;
             flex-direction: column;
             gap: 25px;
+            color: var(--font-main);
 
             .header_sect {
                 h1 {
@@ -53,7 +54,6 @@
                 h2 {
                     font-size: 1rem;
                     font-weight: 600;
-                    color: $font-maincolor;
                 }
             }
 
@@ -67,7 +67,7 @@
                     padding: 10px;
                     box-shadow: 0 0 10px 0 rgba(#666666, 0.25);
                     border-radius: 100%;
-                    color: $font-maincolor;
+                    color: var(--font-main);
                     transition: all ease 0.2s;
     
                     i {
@@ -79,8 +79,8 @@
                     }
     
                     &:hover {
-                        color: white;
-                        background-color: #333;
+                        color: var(--bg-color);
+                        background-color: var(--bg-hover);
                     }
                 }
             }
@@ -90,7 +90,7 @@
             display: flex;
             flex-direction: column;
             gap: 25px;
-            color: $font-maincolor;
+            color: var(--font-main);
 
             .contact_data {
                 display: grid;
@@ -114,7 +114,7 @@
                     .langs_item {
                         display: flex;
                         border-radius: 25px;
-                        border: 1px solid $border-main;
+                        border: 1px solid var(--border-main);
                         overflow: hidden;
 
                         img {
@@ -157,14 +157,14 @@
                 button {
                     min-width: 150px;
                     padding: 10px 25px;
-                    border: 1.5px solid $border-main;
+                    border: 1.5px solid var(--border-main);
                     border-radius: 25px;
                     font-weight: 600;
                     background: #FFFFFF;
-                    color: $font-maincolor;
+                    color: var(--bg-color);
         
                     &:hover {
-                        background-color: #eee;
+                        background-color: #e0e0e0;
                     }
         
                     &:active {

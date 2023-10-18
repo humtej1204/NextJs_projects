@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.scss';
+import { AppContextProvider } from '@/context/ContextProvider';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,7 +26,9 @@ export default function RootLayout({
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css' />
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css' />
       </head>
-      <body className={inter.className}>{children}</body>
+      <AppContextProvider>
+        <body className={inter.className}>{children}</body>
+      </AppContextProvider>
     </html>
   )
 }

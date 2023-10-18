@@ -13,17 +13,18 @@
 
         &:checked {
             &+ .slider {
-                background-color: $color-primary;
+                background-color: white;
 
                 &:before {
                     transform: translateX(20px);
+                    background-color: #001E3D;
                 }
             }
         }
         
         &:focus {
             &+ .slider {
-                box-shadow: 0 0 1px $color-primary;
+                box-shadow: 0 0 1px var(--bg-oposite);
             }
         }
    }

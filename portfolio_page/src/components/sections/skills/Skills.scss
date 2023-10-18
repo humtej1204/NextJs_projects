@@ -1,7 +1,8 @@
 @import '@/app/globals.scss';
 
 .skills_section {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23ebebeb' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23f0f0f0' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23f5f5f5' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23fafafa' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23FFFFFF' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: var(--bg-color);
+    background-image: var(--bg-skills);
     background-size: cover;
     background-position: top;
 }
@@ -12,7 +13,7 @@
     gap: 50px;
 
     h1 {
-        color: $font-maincolor;
+        color: var(--font-main);
         font-size: 1.5rem;
         font-weight: 600;
     }

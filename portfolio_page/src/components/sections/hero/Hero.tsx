@@ -1,7 +1,7 @@
 'use client'
 import { useContext } from 'react';
 import './Hero.scss';
-import { PopupContext } from '@/context/contexts/PopupContext';
+import { PopupContext } from '@/context/PopupContext/PopupContext';
 import PersonalInfo from '@/components/dialogs/PersonalInfo';
 
 export default function Hero() {
@@ -15,14 +15,11 @@ export default function Hero() {
     <section className='banner_hero' id="hero_section">
       <div className='banner_container'>
         <div className='info_sect'>
-          <h1>
-            Hi! I&apos;m Haru Tejada,
-            <br />
-            Web Developer
-          </h1>
-          <h2>
+          <h1>Hi! I&apos;m Haru Tejada,</h1>
+          <h2>Web Developer</h2>
+          <h3>
             Full Stack Developer
-          </h2>
+          </h3>
 
           <button onClick={handleOpenPopup}>
             Contact me
