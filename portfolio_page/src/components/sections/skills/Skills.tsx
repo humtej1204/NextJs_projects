@@ -1,16 +1,21 @@
 "use client"
 import Image from 'next/image';
 import './Skills.scss';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import {TEC_LANGS} from '@/utils/tec-langs-info';
-import {SOFT_SKILLS} from '@/utils/soft-skills-info';
+import { LangContext } from '@/context/langContext/LangContext';
+import { PageInfo } from '@/utils/language-info';
 
 export default function SkillsSection() {
+    const {lang} = useContext(LangContext);
+    const selectedLang: 'EN' | 'ES' = lang;
+    const {skills_sect} = PageInfo[selectedLang];
+    
     return (
         <div className='skills_section container_sect' id="skills_section">
             <div className='skills_container section_container'>
                 <section className='tecSkills_sect'>
-                    <h1>Habilidades Tecnicas:</h1>
+                    <h1>{skills_sect.sections.techSkills.tittle}:</h1>
 
                     <div className='tecnologies_section'>
                         {TEC_LANGS.map((elem) => (
@@ -31,17 +36,17 @@ export default function SkillsSection() {
                 </section>
 
                 <section className='softSkills_sect'>
-                    <h1>Habilidades blandas:</h1>
+                    <h1>{skills_sect.sections.softSkills.tittle}:</h1>
 
-                    <SoftSkillsSection />
+                    <SoftSkillsSection softSkills={skills_sect.sections.softSkills.softSkills} />
                 </section>
             </div>
         </div>
     );
 }
 
-function SoftSkillsSection() {
-    const [isOpen, setIsOpen] = useState(new Array(SOFT_SKILLS.length).fill(false));
+function SoftSkillsSection({softSkills}: any) {
+    const [isOpen, setIsOpen] = useState(new Array(softSkills.length).fill(false));
   
     const toggleOpenState = (index: number) => {
       const newIsOpen = [...isOpen];
@@ -51,7 +56,7 @@ function SoftSkillsSection() {
 
     return (
         <ul className='softSkills_container'>
-            {SOFT_SKILLS.map((elem, index) => (
+            {softSkills.map((elem: any, index: number) => (
                 <li key={`softSkill_${elem.key}`}
                 onClick={() => toggleOpenState(index)}>
                     <h2>

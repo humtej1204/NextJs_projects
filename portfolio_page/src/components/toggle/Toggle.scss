@@ -13,11 +13,10 @@
 
         &:checked {
             &+ .slider {
-                background-color: white;
+                background-color: $color-neutro;
 
                 &:before {
                     transform: translateX(20px);
-                    background-color: #001E3D;
                 }
             }
         }

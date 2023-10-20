@@ -3,9 +3,14 @@ import { useContext } from 'react';
 import './Hero.scss';
 import { PopupContext } from '@/context/PopupContext/PopupContext';
 import PersonalInfo from '@/components/dialogs/PersonalInfo';
+import { LangContext } from '@/context/langContext/LangContext';
+import { PageInfo } from '@/utils/language-info';
 
 export default function Hero() {
   const {openPopup} = useContext(PopupContext);
+  const {lang} = useContext(LangContext);
+  const selectedLang: 'EN' | 'ES' = lang;
+  const {hero_sect} = PageInfo[selectedLang];
   
   const handleOpenPopup = () => {
     openPopup(<PersonalInfo />);
@@ -15,14 +20,12 @@ export default function Hero() {
     <section className='banner_hero' id="hero_section">
       <div className='banner_container'>
         <div className='info_sect'>
-          <h1>Hi! I&apos;m Haru Tejada,</h1>
-          <h2>Web Developer</h2>
-          <h3>
-            Full Stack Developer
-          </h3>
+          <h1>{hero_sect.tittle}</h1>
+          <h2>{hero_sect.subTittle}</h2>
+          <h3>{hero_sect.jobTittle}</h3>
 
           <button onClick={handleOpenPopup}>
-            Contact me
+            {hero_sect.button}
           </button>
         </div>
         

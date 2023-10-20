@@ -9,16 +9,24 @@ import { LangContext } from '@/context/langContext/LangContext';
 import { ThemeContext } from '@/context/thermeContext/ThermeContext';
 
 export default function Header() {
-  const {setPageLang} = useContext(LangContext);
+  const {lang, setPageLang} = useContext(LangContext);
   const {theme, setPageTheme} = useContext(ThemeContext);
 
-  const handleLangData = (data: 'EN'|'ES') => {
+  const handleLangData = useCallback((data: 'EN'|'ES') => {
     setPageLang(data);
-  };
+  }, [setPageLang]);
 
   const handleThemeData = useCallback((data: 'light'|'dark') => {
     setPageTheme(data);
   }, [setPageTheme]);
+
+  useEffect(() => {
+      const localLang: 'EN'|'ES'|null = localStorage.getItem('lang') as 'EN'|'ES';
+
+      if (localLang) {
+          handleLangData(localLang);
+      }
+  }, [handleLangData]);
 
   useEffect(() => {
       const localTheme: 'light'|'dark'|null = localStorage.getItem('theme') as 'light'|'dark';
@@ -38,7 +46,10 @@ export default function Header() {
     <header>
       <div className='toggle_item'>
         <Image src={EN_IMG} alt="EN_Image" />
-        <Toggle values={['EN', 'ES']} getValue={handleLangData} />
+        <Toggle values={['EN', 'ES']}
+        getValue={handleLangData}
+        setValue={lang}
+        />
         <Image src={ES_IMG} alt="ES_Image" />
       </div>
       <hr />

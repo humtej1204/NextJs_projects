@@ -1,17 +1,22 @@
 "use client"
 import Image from 'next/image';
 import './Proyects.scss';
-import { useEffect, useRef, useState } from 'react';
-import { PROJECTS_LIST } from '@/utils/projects-info';
+import { useContext, useEffect, useRef, useState } from 'react';
+import { LangContext } from '@/context/langContext/LangContext';
+import { PageInfo } from '@/utils/language-info';
 
 export default function ProyectsSection() {
+    const {lang} = useContext(LangContext);
+    const selectedLang: 'EN' | 'ES' = lang;
+    const {projects_sect} = PageInfo[selectedLang];
+    
     return (
         <div className='projects_section container_sect' id="projects_section">
             <section className='projects_container section_container'>
-                <h1>Proyectos</h1>
+                <h1>{projects_sect.tittle}</h1>
 
                 <div className='projects_content'>
-                    {PROJECTS_LIST.map((elem, index) => (
+                    {projects_sect.projects.map((elem, index) => (
                         <ProyectCard
                         key={index}
                         data={elem} />

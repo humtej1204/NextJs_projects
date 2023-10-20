@@ -160,8 +160,8 @@
                     border: 1.5px solid var(--border-main);
                     border-radius: 25px;
                     font-weight: 600;
-                    background: #FFFFFF;
-                    color: var(--bg-color);
+                    background: var(--bg-color);
+                    color: var(--font-main);
         
                     &:hover {
                         background-color: #e0e0e0;

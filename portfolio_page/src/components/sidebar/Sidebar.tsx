@@ -1,6 +1,13 @@
+import { useContext } from 'react';
 import './Sidebar.scss';
+import { LangContext } from '@/context/langContext/LangContext';
+import { PageInfo } from '@/utils/language-info'
 
 export default function Sidebar() {
+    const {lang} = useContext(LangContext);
+    const selectedLang: 'EN' | 'ES' = lang;
+    const {aside} = PageInfo[selectedLang];
+
     return (
         <aside className='flex flex-col justify-between items-center'>
             <div className='logo_sect justify-center'>
@@ -9,15 +16,11 @@ export default function Sidebar() {
             </div>
 
             <ul>
-                <a href="#hero_section">
-                    <li>About me</li>
-                </a>
-                <a href="#skills_section">
-                    <li>Skills</li>
-                </a>
-                <a href="#projects_section">
-                    <li>Projects</li>
-                </a>
+                {aside?.nav.map((elem) => (
+                    <a href={`#${elem.key}`} key={elem.key}>
+                        <li>{elem.label}</li>
+                    </a>
+                ))}
             </ul>
 
             <div className='social_sect flex-col justify-between gap-6'>

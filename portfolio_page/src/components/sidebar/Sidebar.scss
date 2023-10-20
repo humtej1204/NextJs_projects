@@ -1,6 +1,7 @@
 @import '@/app/globals.scss';
 
 aside {
+    min-width: 150px;
     width: auto;
     height: 100vh;
     background-color: var(--bg-color);
