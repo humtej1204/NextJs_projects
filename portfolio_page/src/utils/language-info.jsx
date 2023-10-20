@@ -17,7 +17,7 @@ export const PageInfo = {
             button: 'Contact me'
         },
         contact_sect: {
-            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+            description: "My focus on proactivity, a passion for continuous learning, and a dedication to continuous improvement are the pillars that define me as a valuable asset to any team. My commitment to the company's success is based on my desire to apply not only my skills but also my past experiences to overcome challenges and achieve ambitious goals. I understand that the path to achieving the company's objectives is intrinsically linked to my personal goals of growth and self-improvement. I am ready to contribute my knowledge and competencies strategically, working in collaboration with my teammates to achieve not only the organization's success but also my own continuous growth and development.",
             personalData: [
                 {
                     key: 'email', label: 'Email',
@@ -70,7 +70,7 @@ export const PageInfo = {
             button: 'Contactame'
         },
         contact_sect: {
-            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+            description: 'Mi enfoque en la proactividad, la pasión por el aprendizaje constante y la dedicación a la mejora continua son los pilares que me definen como un activo valioso para cualquier equipo. Mi compromiso con el éxito de la empresa se basa en mi deseo de aplicar no solo mis habilidades, sino también mis experiencias pasadas, para superar desafíos y alcanzar metas ambiciosas. Entiendo que el camino hacia el logro de los objetivos de la empresa está intrínsecamente ligado a mis objetivos personales de crecimiento y superación. Estoy listo para aportar mis conocimientos y competencias de manera estratégica, trabajando en colaboración con mis compañeros de equipo para lograr no solo el éxito de la organización, sino también mi propio crecimiento y desarrollo continuo.',
             personalData: [
                 {
                     key: 'email', label: 'Correo',

@@ -60,8 +60,15 @@ export default function PersonalInfo() {
                     </div>
 
                     <div className='action_btns'>
-                        <button>{contact_sect.buttons[0]}</button>
-                        <button>{contact_sect.buttons[1]}</button>
+                        <a className='btn'
+                        href={`/assets/files/Humberto_Tejada-${selectedLang}.pdf`}
+                        download={`Humberto_Tejada.pdf`}>
+                            {contact_sect.buttons[0]}
+                        </a>
+                        <a className='btn'
+                        href="mailto:humtej1204@gmail.com">
+                            {contact_sect.buttons[1]}
+                        </a>
                     </div>
                 </section>
             </div>
