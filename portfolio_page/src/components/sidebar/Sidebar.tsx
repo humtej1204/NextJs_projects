@@ -9,7 +9,7 @@ export default function Sidebar() {
     const {aside} = PageInfo[selectedLang];
 
     return (
-        <aside className='flex flex-col justify-between items-center'>
+        <aside className='hidden lg:flex flex-col justify-between items-center'>
             <div className='logo_sect justify-center'>
                 <img src={`/assets/LOGO.svg`} />
                 <span>Haru Dev</span>

@@ -18,7 +18,15 @@ $border-main: #dfdfdf;
 }
 
 .container_sect {
-    padding: 5% 50px;
+    padding: 50px 10px;
+
+    @media (min-width: 576px) {
+        padding: 50px;
+    }
+
+    @media (min-width: 1024px) {
+        padding: 5% 50px;
+    }
 }
 
 .section_container {

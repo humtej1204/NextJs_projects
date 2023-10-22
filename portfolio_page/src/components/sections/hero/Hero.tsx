@@ -17,9 +17,9 @@ export default function Hero() {
   };
 
   return (
-    <section className='banner_hero' id="hero_section">
-      <div className='banner_container'>
-        <div className='info_sect'>
+    <section id="hero_section" className='banner_hero'>
+      <div className='banner_container flex flex-col lg:flex-row'>
+        <div className='info_sect flex flex-col justify-center items-center lg:justify-start lg:items-start'>
           <h1>{hero_sect.tittle}</h1>
           <h2>{hero_sect.subTittle}</h2>
           <h3>{hero_sect.jobTittle}</h3>
@@ -33,7 +33,7 @@ export default function Hero() {
           <img src="https://as1.ftcdn.net/v2/jpg/05/74/26/68/1000_F_574266873_vhv00QksxhRPgy0cEeWTE15ImuhTEu7e.jpg" alt="" />
         </div>
       </div>
-      <div className='floating_btn'>
+      <div className='floating_btn hidden lg:inline'>
         <i className="fi fi-br-chevron-double-down"></i>
       </div>
     </section>

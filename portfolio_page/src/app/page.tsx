@@ -13,7 +13,8 @@ export default function Home() {
   const {theme} = useContext(ThemeContext);
 
   return (
-    <main data-theme={(theme === 'dark') ? 'dark' : 'light'}>
+    <main className='flex flex-col lg:flex-row'
+    data-theme={(theme === 'dark') ? 'dark' : 'light'}>
       
       <PopupProvider>
       <Header />

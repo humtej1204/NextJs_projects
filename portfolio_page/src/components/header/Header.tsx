@@ -1,9 +1,6 @@
 'use client'
-import Image from 'next/image';
 import './Header.scss';
 import Toggle from '../toggle/Toggle';
-import EN_IMG from '@/assets/EN.png'
-import ES_IMG from '@/assets/ES.png'
 import { useCallback, useContext, useEffect } from 'react';
 import { LangContext } from '@/context/langContext/LangContext';
 import { ThemeContext } from '@/context/thermeContext/ThermeContext';
@@ -43,23 +40,32 @@ export default function Header() {
   }, [theme, handleThemeData]);
 
   return (
-    <header>
-      <div className='toggle_item'>
-        <Image src={EN_IMG} alt="EN_Image" />
-        <Toggle values={['EN', 'ES']}
-        getValue={handleLangData}
-        setValue={lang}
-        />
-        <Image src={ES_IMG} alt="ES_Image" />
+    <header className='sticky lg:absolute'>
+      <div className='mobile_header flex lg:hidden'>
+        <img src={`/assets/LOGO.svg`} />
+
+        <button>
+          <i className="fi fi-br-menu-burger"></i>
+        </button>
       </div>
-      <hr />
-      <div className='toggle_item'>
-        <i className="fi fi-br-sun"></i>
-        <Toggle values={['light', 'dark']}
-        getValue={handleThemeData}
-        setValue={theme}
-        />
-        <i className="fi fi-br-moon"></i>
+      <div className='desktop_header hidden lg:flex'>
+        <div className='toggle_item'>
+          <img src={'/assets/EN.png'} alt="EN_Image" />
+          <Toggle values={['EN', 'ES']}
+          getValue={handleLangData}
+          setValue={lang}
+          />
+          <img src={'/assets/ES.png'} alt="ES_Image" />
+        </div>
+        <hr />
+        <div className='toggle_item'>
+          <i className="fi fi-br-sun"></i>
+          <Toggle values={['light', 'dark']}
+          getValue={handleThemeData}
+          setValue={theme}
+          />
+          <i className="fi fi-br-moon"></i>
+        </div>
       </div>
     </header>
   );

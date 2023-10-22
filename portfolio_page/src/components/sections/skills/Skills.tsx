@@ -13,9 +13,9 @@ export default function SkillsSection() {
     
     return (
         <div className='skills_section container_sect' id="skills_section">
-            <div className='skills_container section_container'>
+            <div className='section_container skills_container flex flex-col lg:flex-row'>
                 <section className='tecSkills_sect'>
-                    <h1>{skills_sect.sections.techSkills.tittle}:</h1>
+                    <h1 className='text-center lg:text-left'>{skills_sect.sections.techSkills.tittle}:</h1>
 
                     <div className='tecnologies_section'>
                         {TEC_LANGS.map((elem) => (
@@ -36,7 +36,9 @@ export default function SkillsSection() {
                 </section>
 
                 <section className='softSkills_sect'>
-                    <h1>{skills_sect.sections.softSkills.tittle}:</h1>
+                    <h1 className='text-center lg:text-left'>
+                        {skills_sect.sections.softSkills.tittle}:
+                    </h1>
 
                     <SoftSkillsSection softSkills={skills_sect.sections.softSkills.softSkills} />
                 </section>
