@@ -63,15 +63,15 @@
             border: 1.5px solid var(--border-main);
             border-radius: 10px;
             font-weight: 600;
-            background: #FFFFFF;
-            color: $font-maincolor;
+            background: var(--bg-color);
+            color: var(--font-main);
 
             &:hover {
-                background-color: #eee;
+                background-color: var(--bg-hover);
             }
 
             &:active {
-                background-color: #f9f9f9;
+                background-color: var(--bg-active);
             }
         }
     }

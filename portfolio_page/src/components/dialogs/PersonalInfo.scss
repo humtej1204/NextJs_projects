@@ -6,8 +6,8 @@
     max-width: 1200px;
     width: 100%;
     height: auto;
-    margin-top: 100px;
-    max-height: 75vh;
+    max-height: calc(95vh - 100px);
+    top: 50px;
     background-color: var(--bg-color);
     border-radius: 25px;
     padding: 25px 15px;
@@ -21,7 +21,9 @@
         border: solid 5px white;
         overflow: hidden;
         top: -100px;
-        left: 50px;
+        left: 0;
+        right: 0;
+        margin: auto;
 
         img {
             width: 100%;
@@ -32,7 +34,8 @@
 
     .info_container {
         width: 100%;
-        height: calc(75vh - 170px);
+        height: auto;
+        max-height: calc(95vh - 270px);
         overflow: auto;
         display: flex;
         flex-direction: column;
@@ -83,8 +86,8 @@
                     }
     
                     &:hover {
-                        color: var(--bg-color);
-                        background-color: var(--bg-hover);
+                        color: var(--font-hover-dark);
+                        background-color: var(--bg-hover-dark);
                     }
                 }
             }
@@ -159,7 +162,7 @@
                 margin-bottom: 0;
 
                 .btn {
-                    min-width: 150px;
+                    min-width: 160px;
                     padding: 10px 25px;
                     border: 1.5px solid var(--border-main);
                     border-radius: 25px;
@@ -169,11 +172,11 @@
                     text-align: center;
         
                     &:hover {
-                        background-color: #e0e0e0;
+                        background-color: var(--bg-hover);
                     }
         
                     &:active {
-                        background-color: #f9f9f9;
+                        background-color: var(--bg-active);
                     }
                 }
             }
@@ -181,10 +184,14 @@
     }
 
     @media (min-width: 768px) {
+        .img_container {
+            left: 50px;
+            right: auto;
+        }
+
         .info_container {
             flex-direction: row;
             justify-content: center;
-            height: auto;
 
             .contact_sect {
                 .contact_data {
@@ -205,5 +212,6 @@
     @media (min-width: 1024px) {
         margin-top: 0;
         padding: 50px;
+        padding-top: 120px;
     }
 }

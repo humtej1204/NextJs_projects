@@ -37,7 +37,6 @@ $border-main: #dfdfdf;
 
 :root {
     --bg-color: #ffffff;
-    --bg-hover: #333333;
     --bg-oposite: #001E3D;
 
     --bg-hero: url(
@@ -53,12 +52,17 @@ $border-main: #dfdfdf;
     --font-main: #333333;
     --font-mainDark: #111111;
 
+    --bg-hover: #f3f3f3;
+    --font-hover: #333333;
+    --bg-active: #f9f9f9;
+    --bg-hover-dark: #333333;
+    --font-hover-dark: #ffffff;
+
     --border-main: #dfdfdf;
 }
 
 [data-theme="dark"] {
     --bg-color: #001E3D;
-    --bg-hover: #ffffff;
     --bg-oposite: #ffffff;
 
     --bg-hero: url(
@@ -74,6 +78,12 @@ $border-main: #dfdfdf;
 
     --font-main: #ffffff;
     --font-mainDark: #ffffff;
+    
+    --bg-hover: #001122;
+    --font-hover: #ffffff;
+    --bg-active: #003366;
+    --bg-hover-dark: #ffffff;
+    --font-hover-dark: #001E3D;
 
     --border-main: #ffffff;
 }

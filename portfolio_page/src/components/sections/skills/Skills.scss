@@ -77,16 +77,16 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding-right: 10px;
+    padding: 0px 10px 5px 0;
 
     li {
-        background-color: white;
+        background-color: var(--bg-color);
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        border: 1px solid $border-main;
+        border: 1px solid var(--border-main);
         border-radius: 25px;
-        color: $font-maincolor;
+        color: var(--font-main);
         padding: 15px;
         cursor: pointer;
 
