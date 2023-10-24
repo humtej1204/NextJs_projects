@@ -33,7 +33,10 @@ function ProyectCard({data}: any) {
             <div className='pCard_header'>
                 <h2>{data.name}</h2>
 
-                <ProyectMenu />
+                <ProyectMenu 
+                deployed_web={data.deployed_web}
+                repo={data.repo}
+                />
             </div>
             <img src={`/assets/projects/${data.key}.webp`} alt="test" />
             <div className='pCard_cont'>
@@ -56,7 +59,7 @@ function ProyectCard({data}: any) {
     );
 }
 
-function ProyectMenu() {
+function ProyectMenu({deployed_web, repo}: any) {
     const [showMenu, setShowMenu] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
 
@@ -84,10 +87,10 @@ function ProyectMenu() {
                 <i className="fi fi-bs-menu-dots-vertical"></i>
             </button>
             {showMenu && <div ref={menuRef} className='pMenu_cont'>
-                <a href="">
+                <a href={repo} target='_blank'>
                     Ver Código
                 </a>
-                <a href="">
+                <a href={deployed_web} target='_blank'>
                     Ir a la Página
                 </a>
             </div>}

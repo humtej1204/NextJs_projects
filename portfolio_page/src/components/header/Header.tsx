@@ -40,7 +40,7 @@ export default function Header() {
   }, [theme, handleThemeData]);
 
   return (
-    <header className='sticky lg:absolute'>
+    <header className='lg:absolute'>
       <div className='mobile_header flex lg:hidden'>
         <img src={`/assets/LOGO.svg`} />
 

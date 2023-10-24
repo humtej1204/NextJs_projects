@@ -17,14 +17,14 @@ export default function Home() {
     data-theme={(theme === 'dark') ? 'dark' : 'light'}>
       
       <PopupProvider>
-      <Header />
-      <Sidebar />
-      
-      <div className="main_container">
-        <Hero />
-        <SkillsSection />
-        <ProyectsSection />
-      </div>
+        <Header />
+        <Sidebar />
+        
+        <div className="main_container">
+          <Hero />
+          <SkillsSection />
+          <ProyectsSection />
+        </div>
       </PopupProvider>
     </main>
   );
